@@ -20,7 +20,7 @@ import java.util.Objects;
  */
 public class MetaData {
 	
-	/*
+    /*
      * The Connection object for the database connection
      */
     private Connection connection;
@@ -33,7 +33,7 @@ public class MetaData {
 	/**
 	 * Constructs a new instance of the MetaData class with the given ConnectionManager object.
 	 * @param connectionManager
-	 * 			The ConnectionManager object to use for database connectivity 
+	 * 		The ConnectionManager object to use for database connectivity 
 	 * @throws SQLException
 	 */
 	public MetaData(ConnectionManager connectionManager) throws SQLException {
@@ -45,10 +45,10 @@ public class MetaData {
      * Executes a SQL query and returns a ResultSet object containing the results.
      * 
      * @param query 
-     * 			The SQL query to execute
+     * 		The SQL query to execute
      * @return A ResultSet object containing the results of the query
      * @throws SQLException 
-     * 			If a database access error occurs
+     * 		If a database access error occurs
      */
     public ResultSet executeQuery(String query) throws SQLException {
         Statement stmt = connection.createStatement();
@@ -61,7 +61,7 @@ public class MetaData {
 	 * 
 	 * @return ArrayList of table names
 	 * @throws SQLException 
-	 * 			 if there is an error accessing the database metadata
+	 * 	        If there is an error accessing the database metadata
 	 */
 	public ArrayList<String> getTables() throws SQLException {
 		String[] types = {"TABLE"};
@@ -80,12 +80,12 @@ public class MetaData {
 	 * Retrieves the column names for the specified relation
 	 * 
 	 * @param relation
-	 * 			The name of the relation for which to retrieve the column names (must not be null)
+	 * 		The name of the relation for which to retrieve the column names (must not be null)
 	 * @return An ArrayList containing the names of the columns in the specified relation
 	 * @throws SQLException 
-	 * 			If a database access error occurs
+	 * 		If a database access error occurs
 	 * @throws IllegalArgumentException 
-	 * 			If dbmd or relation is null
+	 * 		If dbmd or relation is null
 	 */
 	public ArrayList<String> getColumns(String relation) throws SQLException {
 	    Objects.requireNonNull(relation, "Relation name cannot be null");
@@ -105,11 +105,11 @@ public class MetaData {
 	 * Retrieves the primary keys for the specified relation
 	 * 
 	 * @param relation
-	 * 			The name of the relation for which to retrieve the column names (must not be null)
+	 * 		The name of the relation for which to retrieve the column names (must not be null)
 	 * @throws SQLException 
-	 * 			If a database access error occurs
+	 * 		If a database access error occurs
 	 * @throws IllegalArgumentException 
-	 * 				If dbmd or relation is null
+	 * 		If dbmd or relation is null
 	 */
 	public ArrayList<String> getPrimaryKeys(String relation) throws SQLException {
 	    Objects.requireNonNull(relation, "Relation name cannot be null");
@@ -129,10 +129,10 @@ public class MetaData {
 	 * Returns the tuple count of the given relation
 	 * 
 	 * @param relation
-	 * 			The name of the relation to query
+	 * 		The name of the relation to query
 	 * @return The tuple count of the specified relation
 	 * @throws SQLException
-	 * 			If query execution fails
+	 * 		If query execution fails
 	 */
 	public int getTupleCount(String relation) throws SQLException {
 		Objects.requireNonNull(relation, "Relation name cannot be null");
@@ -155,12 +155,12 @@ public class MetaData {
 	 * Returns the count of distinct values in the specified columns of the given relation
 	 * 
 	 * @param columns
-	 * 			A comma-separated list of column names
+	 * 		A comma-separated list of column names
 	 * @param relation
-	 * 			The name of the relation to query
+	 * 		The name of the relation to query
 	 * @return The count of distinct values in the specified columns
 	 * @throws SQLException
-	 * 			If query execution fails
+	 * 		If query execution fails
 	 */
 	public int getDistinctCount(String columns, String relation) throws SQLException {
 		Objects.requireNonNull(relation, "Relation name cannot be null");
