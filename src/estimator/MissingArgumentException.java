@@ -14,7 +14,7 @@ public class MissingArgumentException extends Exception {
 	/**
 	 * Constructs a MissingArgumentException with the specified detail message
 	 * @param message 
-	 * 			the detail message (which is saved for later retrieval by the getMessage method)
+	 * 		The detail message (which is saved for later retrieval by the getMessage method)
 	 */
 	public MissingArgumentException(String message) {
         super(message);
