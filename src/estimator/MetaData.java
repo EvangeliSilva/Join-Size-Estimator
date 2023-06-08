@@ -10,7 +10,6 @@ import java.util.Objects;
 
 
 /**
- * 
  * The MetaData class represents the metadata information for a database connection, 
  * including the DatabaseMetaData object and the Connection object. 
  * 
