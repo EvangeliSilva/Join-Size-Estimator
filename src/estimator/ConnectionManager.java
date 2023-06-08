@@ -61,11 +61,11 @@ public class ConnectionManager {
      * Creates a new instance of the ConnectionManager class.
      * 
      * @param url
-     * 			The JDBC URL for the database connection
+     * 		The JDBC URL for the database connection
      * @param username 
-     * 			The username for the database connection
+     * 		The username for the database connection
      * @param password 
-     * 			The password for the database connection
+     * 		The password for the database connection
      * @throws SQLException 
      */
     public ConnectionManager(String url, String username, String password) throws SQLException {
@@ -80,7 +80,7 @@ public class ConnectionManager {
      * 
      * @return A Connection object for the database connection
      * @throws SQLException 
-     * 			If a database access error occurs
+     * 		If a database access error occurs
      */
     public Connection getConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
@@ -95,7 +95,7 @@ public class ConnectionManager {
      * 
      * @return The DatabaseMetaData object associated with the database connection
      * @throws SQLException 
-     * 			If a database access error occurs
+     * 		If a database access error occurs
      */
     public DatabaseMetaData getDatabaseMetaData() throws SQLException {
         return getConnection().getMetaData();
@@ -105,10 +105,10 @@ public class ConnectionManager {
      * Executes a SQL query and returns a ResultSet object containing the results.
      * 
      * @param query 
-     * 			The SQL query to execute
+     * 		The SQL query to execute
      * @return A ResultSet object containing the results of the query
      * @throws SQLException 
-     * 			If a database access error occurs
+     * 		If a database access error occurs
      */
     public ResultSet executeQuery(String query) throws SQLException {
         Statement stmt = connection.createStatement();
@@ -120,7 +120,7 @@ public class ConnectionManager {
      * Closes the database connection and releases any resources associated with it.
      * 
      * @throws SQLException 
-     * 			If a database access error occurs
+     * 		If a database access error occurs
      */
     public void close() throws SQLException {
         if (connection != null && !connection.isClosed()) {
