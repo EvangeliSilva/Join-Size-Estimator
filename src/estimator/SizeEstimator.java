@@ -24,7 +24,7 @@ public class SizeEstimator {
 	/**
 	 * Constructs a new instance of the SizeEstimator class with the given ConnectionManager object.
 	 * @param connectionManager
-	 * 			The ConnectionManager object to use for database connectivity 
+	 * 		The ConnectionManager object to use for database connectivity 
 	 * @throws SQLException
 	 */
 	public SizeEstimator(ConnectionManager connectionManager) throws SQLException {
@@ -34,16 +34,16 @@ public class SizeEstimator {
 	/**
 	 * Returns the size of the join of the given relation with another relation
 	 * @param relation 
-	 * 			The name of the relation for which to estimate the size of join
+	 * 		The name of the relation for which to estimate the size of join
 	 * @param intersection
-	 * 			The list of attributes that the given relation shares with another relation
+	 * 		The list of attributes that the given relation shares with another relation
 	 * @param firstRelationSize
-	 * 			The size of the first relation in the join
+	 * 		The size of the first relation in the join
 	 * @param secondRelationSize
-	 * 			The size of the second relation in the join
+	 * 		The size of the second relation in the join
 	 * @return The size of the join of the given relation with another relation
 	 * @throws SQLException
-	 * 			If there is an error retrieving metadata from the database
+	 * 		If there is an error retrieving metadata from the database
 	 */
 	public int getJoinTupleCount(String relation, ArrayList<String> intersection, 
 			int firstRelationSize, int secondRelationSize) throws SQLException {
@@ -55,12 +55,12 @@ public class SizeEstimator {
 	 * Calculates the estimated size of a natural join operation between two relations
 	 * 
 	 * @param firstRelation
-	 * 			The first relation to join
+	 * 		The first relation to join
 	 * @param secondRelation
-	 * 			The second relation to join
+	 * 		The second relation to join
 	 * @return An integer representing the estimated size of the natural join operation
 	 * @throws SQLException
-	 * 			If an SQL exception occurs while querying the metadata of the relations
+	 * 		If an SQL exception occurs while querying the metadata of the relations
 	 */
 	public int getEstimatedJoinSize(String firstRelation, String secondRelation) throws SQLException {
 		int estimatedSize = 0;
@@ -91,12 +91,12 @@ public class SizeEstimator {
 	 * Returns the actual size of the join between two relations by executing a SQL query 
 	 * to count the number of tuples in the natural join of the given two relations.
 	 * @param firstRelation
-	 * 			The first relation to join
+	 * 		The first relation to join
 	 * @param secondRelation
-	 * 			The second relation to join
+	 * 		The second relation to join
 	 * @return An integer representing the actual size of the natural join operation
 	 * @throws SQLException 
-	 * 			if there is an error executing the SQL query
+	 * 		If there is an error executing the SQL query
 	 */
 	public int getActualJoinSize(String firstRelation, String secondRelation) throws SQLException {
 		int actualSize = 0;
