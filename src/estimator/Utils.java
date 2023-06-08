@@ -17,7 +17,7 @@ public class Utils {
 	 * and replacing the square brackets with parentheses.
 	 * 
 	 * @param list
-	 * 			The ArrayList to be converted to a string representation
+	 * 		The ArrayList to be converted to a string representation
 	 * @return A string representation of the given ArrayList with square brackets replaced by parentheses
 	 */
 	public static String toString(ArrayList<String> list) {
@@ -28,9 +28,9 @@ public class Utils {
 	 * Returns a new ArrayList containing the intersection of the two input ArrayLists.
 	 * 
 	 * @param list1
-	 * 			The first input ArrayList
+	 * 		The first input ArrayList
 	 * @param list2 
-	 * 			The second input ArrayList
+	 * 		The second input ArrayList
 	 * @return A new ArrayList containing the intersection of the two input ArrayLists
 	 */
 	public static ArrayList<String> getIntersection(ArrayList<String> list1, ArrayList<String> list2) {
