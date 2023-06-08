@@ -5,8 +5,6 @@ import java.util.ArrayList;
 
 
 /**
- * ICSI 508 - Homework 8
- * 
  * An application that takes two table names of the university dataset
  * as command-line arguments and calculates and prints the estimated join size,
  * actual join size and the estimation error.
